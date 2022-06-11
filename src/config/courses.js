@@ -44,11 +44,10 @@ export default [
             text:["Курс посвящен самой популярной системой контроля версий — Git."]
         },
         {
-            id:"terraform",
+            id1:"terraform",
             category:"devops",
             title:"Terraform: Инфраструктура как код (IaC)",
             icon:"terraform",
-            //subtitle:"16ч. Уровень: Средний",
             duration:16,
             level:1,
             text:["В курсе рассматриваются вопросы применения Terraform для реализации подхода \"Инфраструктура как код\" "],
@@ -62,7 +61,7 @@ export default [
             ]
         },
         {
-            id:"ansible",
+            id1:"ansible",
             category:"devops",
             title:"Ansible: Управление конфигурациями",
             icon:"ansible",
