@@ -1,0 +1,7 @@
+
+docker build -t ekuchin/site .
+docker login
+docker push ekuchin/site
+
+# docker run -itd -p 80:80 --name vote ekuchin/site
+# docker update --restart unless-stopped <id>

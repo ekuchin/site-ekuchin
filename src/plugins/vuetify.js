@@ -18,6 +18,7 @@ const myCustomLightTheme = {
     info: '#05788d',
     success: '#05788d',
     warning: '#FB8C00',
+    accent: '#8c9eff'
   }
 }
 

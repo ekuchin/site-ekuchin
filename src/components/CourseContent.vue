@@ -3,7 +3,7 @@
       
        <v-row >
           <v-col align="center" cols="11">
-            <v-card-title :class="headerClass">{{item.title}}</v-card-title>
+            <v-card-title class="text-primary">{{item.title}}</v-card-title>
             <v-card-subtitle align="left" class="text-primary">{{subtitle()}}</v-card-subtitle>
           </v-col>
      <v-col>
