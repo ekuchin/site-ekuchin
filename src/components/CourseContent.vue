@@ -7,12 +7,7 @@
             <v-card-subtitle align="left" class="text-primary">{{subtitle()}}</v-card-subtitle>
           </v-col>
      <v-col>
-     <v-btn
-        icon="mdi-dots-horizontal"
-        class="text-secondary"
-        :to="'/files/'+item.file" target="_blank"
-        v-show="item.id"
-      ></v-btn>
+
      </v-col>
        </v-row>
 
@@ -33,7 +28,13 @@
 
           </v-col>
         </v-row>
-        
+     
+     <v-btn
+        class="text-primary pa-0 mb-2"
+        :to="'/files/'+item.file" target="_blank"
+        v-show="item.id"
+      >Подробно</v-btn>
+
       </v-card>
 </template>
 
