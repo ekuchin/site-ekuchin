@@ -1,0 +1,13 @@
+cd ..
+npm run build
+cd deploy
+docker build -t site ..
+
+# You must run "yc init" to authorize in yandex.cloud 
+export IAM_TOKEN=`yc iam create-token`
+
+docker tag site cr.yandex/crplcj4u0iteb8ef7tnd/site
+docker push cr.yandex/crplcj4u0iteb8ef7tnd/site:latest
+
+# docker run -itd -p 80:8080 --name vote ekuchin/site
+# docker update --restart unless-stopped <id>

@@ -1,0 +1,9 @@
+cd ..
+npm run build
+cd deploy
+docker build -f ./Dockerfile -t ekuchin/site ..
+docker login
+docker push ekuchin/site
+
+# docker run -itd -p 80:8080 --name site ekuchin/site
+# docker update --restart unless-stopped <id>
