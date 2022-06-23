@@ -1,9 +1,11 @@
+CONTAINER_NAME=site
 cd ..
+rm -r dist
 npm run build
 cd deploy
-docker build -f ./Dockerfile -t ekuchin/site ..
+docker build -f ./Dockerfile -t ekuchin/$CONTAINER_NAME ..
 docker login
-docker push ekuchin/site
+docker push ekuchin/$CONTAINER_NAME
 
-# docker run -itd -p 80:8080 --name site ekuchin/site
+# docker run -itd -p 2022:8080 --name $CONTAINER_NAME ekuchin/$CONTAINER_NAME
 # docker update --restart unless-stopped <id>

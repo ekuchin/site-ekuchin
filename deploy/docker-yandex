@@ -1,13 +1,15 @@
+CONTAINER_NAME=site
+CONTAINER_REGISTRY_ID=crp295basig5quo4u1qk
 cd ..
 npm run build
 cd deploy
-docker build -t site ..
+docker build -f ./Dockerfile -t $CONTAINER_NAME ..
 
 # You must run "yc init" to authorize in yandex.cloud 
 export IAM_TOKEN=`yc iam create-token`
 
-docker tag site cr.yandex/crplcj4u0iteb8ef7tnd/site
-docker push cr.yandex/crplcj4u0iteb8ef7tnd/site:latest
+docker tag $CONTAINER_NAME cr.yandex/$CONTAINER_REGISTRY_ID/$CONTAINER_NAME
+docker push cr.yandex/$CONTAINER_REGISTRY_ID/$CONTAINER_NAME:latest
 
 # docker run -itd -p 80:8080 --name vote ekuchin/site
 # docker update --restart unless-stopped <id>
